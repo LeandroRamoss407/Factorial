@@ -11,6 +11,11 @@ inputHTML.addEventListener('change', () => {
 
 submitBttn.addEventListener('click', (event) => {
     event.preventDefault();
+    if(inputHTML.value == ''){
+        inputHTML.value = 0;
+        return;
+    }
+
     resultHTML.innerHTML = calcularFatorial(inputHTML.value);
 });
 
